@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "hyperapp",
     "description": "HyperApp is a 1kb functional JavaScript library for building modern UI applications",
     "version": "0.0.6",
@@ -27,4 +28,42 @@
         "uglifyify": "^3.0.4",
         "uglifyjs": "^2.4.10"
     }
+=======
+  "name": "hyperapp",
+  "description": "1kb JavaScript library for building frontend applications.",
+  "version": "0.7.1",
+  "main": "dist/hyperapp.js",
+  "jsnext:main": "src/index.js",
+  "module": "src/index.js",
+  "license": "MIT",
+  "repository": "hyperapp/hyperapp",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "author": "Jorge Bucaran",
+  "keywords": [
+    "hyperx",
+    "hyperscript",
+    "jsx",
+    "react",
+    "elm",
+    "virtual-dom"
+  ],
+  "scripts": {
+    "test": "jest --coverage --no-cache",
+    "build": "rollup -cm -n hyperapp -f umd -i src/index.js -o dist/hyperapp.js",
+    "prepublish": "npm run build",
+    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "babel": {
+    "presets": "es2015"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "jest": "^19.0.2",
+    "rollup": "^0.41.4",
+    "rollup-plugin-uglify": "^1.0.1"
+  }
+>>>>>>> upstream/master
 }
